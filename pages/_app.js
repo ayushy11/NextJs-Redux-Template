@@ -9,18 +9,20 @@ import { Provider } from 'react-redux';
 import store from '@/redux/store';
 
 function MyApp({ Component, pageProps }) {
-  return (    
-    <ChakraProvider theme={theme}>
-          <Component {...pageProps} />
+  return (
+    <Provider store={store}>
+      <ChakraProvider theme={theme}>
+        <Component {...pageProps} />
       </ChakraProvider>
+    </Provider>
   );
 }
 
 export default MyApp;
 
-// <Provider store={store}>
-      {/* <AnimateSharedLayout> */}
-        {/* <SomeProvider> */}
-        {/* </SomeProvider> */}
-      {/* </AnimateSharedLayout> */}
-// </Provider>
+
+{/* <AnimateSharedLayout> */ }
+{/* <SomeProvider> */ }
+{/* </SomeProvider> */ }
+{/* </AnimateSharedLayout> */ }
+
